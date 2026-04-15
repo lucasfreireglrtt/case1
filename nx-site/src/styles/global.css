@@ -11,25 +11,79 @@ body {
     background: white;
   }
   
-  /* HEADER */
-  .header {
+  /* HEADER BASE */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    background: linear-gradient(90deg, #ff7a18, #af002d 70%);
+  
+    padding: 15px 40px;
+    background: linear-gradient(90deg, #ff7a18, #af002d);
     color: white;
   }
   
+  /* LOGO */
   .logo {
-    font-size: 20px;
-    font-weight: bold;
+    height: 40px;
+    cursor: pointer;
   }
   
-  .menu {
-    font-size: 22px;
+  /* MENU DESKTOP */
+  .nav {
+    display: flex;
+    gap: 30px;
   }
   
+  .nav p {
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  .nav p:hover {
+    opacity: 0.7;
+  }
+  
+  /* HAMBURGUER */
+  .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* MENU MOBILE */
+  .mobile-menu {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+  
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+  
+  /* RESPONSIVO */
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  }
+
   /* HERO */
   .hero {
     width: 100%;

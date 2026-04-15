@@ -4,12 +4,16 @@ import google from "../media/Google_2015_logo.svg.png";
 import nasa from "../media/NASA_logo.svg.png";
 import adobe from "../media/Adobe-Logo-2020-present.png";
 import mitsubishi from "../media/Mitsubishi-logo.png";
+import toyota from "../media/toyota.png";
+import shell from "../media/shell.png";
 
 const empresas = [
   { nome: "Google", logo: google },
   { nome: "NASA", logo: nasa },
   { nome: "Adobe", logo: adobe },
-  { nome: "Mitsubishi", logo: mitsubishi }
+  { nome: "Mitsubishi", logo: mitsubishi },
+  { nome: "Toyota", logo: toyota },
+  { nome: "shell", logo: shell }
 ];
 
 export default function Companies() {
@@ -26,7 +30,7 @@ export default function Companies() {
     };
   
     return (
-      <section className="companies-wrapper">
+      <section className="companies-wrapper" id="companies">
         <button className="arrow left" onClick={() => scroll("left")}>
           ◀
         </button>

@@ -5,7 +5,7 @@ export default function Hero() {
     };
   
     return (
-      <section className="hero">
+    <section className="hero" id="hero">
         <div className="overlay">
           <h1>NETWORKING EXPERIENCE</h1>
           <p>UNIVERSITÁRIOS MAIS CONECTADOS</p>

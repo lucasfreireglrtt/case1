@@ -223,55 +223,76 @@ body {
     right: -30px;
   }
   
-  /* INFO */
   .info {
+    position: relative;
+    padding: 100px 20px;
     display: flex;
-    padding: 20px;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
   }
   
-  .image-placeholder {
-    width: 50%;
-    height: 200px;
-    background: #cfcfcf;
+  /* overlay escuro */
+  .info-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
   }
   
-  .text {
-    width: 50%;
+  /* BOX PRINCIPAL */
+  .info-box {
+    position: relative;
+    z-index: 2;
+  
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+    align-items: center;
+    gap: 40px;
   
-  .text button {
-    align-self: flex-end;
-    background: linear-gradient(90deg, #ff7a18, #ff4e50);
-    border: none;
-    padding: 8px 15px;
+    max-width: 1000px;
+    width: 100%;
+  
+    background: rgb(231, 231, 231); /* cinza */
+    padding: 40px;
     border-radius: 20px;
-    color: white;
   }
   
-  /* FORM */
-  .form {
+  /* LADO ESQUERDO (LOGO) */
+  .info-left {
+    flex: 1;
     display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 10px;
+    justify-content: center;
   }
   
-  .form input {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+  .info-left img {
+    width: 400px;
+    max-width: 100%;
   }
   
-  .form button {
+  /* LADO DIREITO (TEXTO) */
+  .info-right {
+    flex: 2;
+  }
+  
+  .info-right p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4d4b4b;
+    margin-bottom: 15px;
+  }
+  
+  .info-right strong {
+    color: #ff4e50;
+  }
+  
+  /* BOTÃO */
+  .info-right button {
+    margin-top: 15px;
     background: linear-gradient(90deg, #ff7a18, #ff4e50);
     border: none;
-    padding: 10px;
+    padding: 12px 24px;
+    border-radius: 25px;
     color: white;
-    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
   }
   
   /* FOOTER */
@@ -324,4 +345,54 @@ body {
     100% {
       transform: translateX(-50%);
     }
+  }
+
+  .form-section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    background: #f5f5f5;
+  }
+  
+  .form {
+    width: 100%;
+    max-width: 400px;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+  
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  .form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .form input,
+  .form select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .form button {
+    margin-top: 10px;
+    background: linear-gradient(90deg, #ff7a18, #ff4e50);
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .form button:disabled {
+    opacity: 0.6;
   }
